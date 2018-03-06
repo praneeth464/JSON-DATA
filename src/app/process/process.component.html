@@ -1,0 +1,14 @@
+<table>
+
+        <thead>
+            <tr>
+                <th *ngFor="let column of categoryColumns"> {{column}}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let row of data | sortBy : 'name' : false">
+                <th *ngFor="let column of categoryColumns"> {{row[column] ? row[column] : '-'}}</th>
+            </tr>
+        </tbody>
+    
+    </table>

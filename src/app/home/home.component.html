@@ -1,0 +1,18 @@
+<table>
+
+    <thead>
+        <tr>
+            <th (click)="sort('name')">name</th>
+            <th (click)="sort('category')">category</th>
+            <th (click)="sort('amount')">amount</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let row of data | sortBy : sortColumn : sortOrder">
+            <th>{{row.name}}</th>
+            <th>{{row.category}}</th>
+            <th>{{row.amount}}</th>
+        </tr>
+    </tbody>
+
+</table>
